@@ -15,6 +15,7 @@
 * nmap扫描要去除特征。
 * 不要相信工具的判断，工具测试一遍，手工测试一遍。
 * sqlmap注入频率问题，使用--delay、--safe-url、--safe-freq    | ID：SewellDinG提供
+* Cobalt Strike的Beacon证书和特征，如果使用默认的将会被检测。
 * Cobalt Strike使用域前置技术，伪装成白站域名，隐藏真实C2服务器IP；（默认启动的CS,基本被各厂商设备能识别到） | ID：SewellDinG提供
 * 在进行有可能导致管理员察觉的敏感操作时（如登录远程桌面等），根据目标所在地区，选择对应IP登录。（有些会提示异地登录提醒） ｜ID: evilAdan0s 提供
 
