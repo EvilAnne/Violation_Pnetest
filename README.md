@@ -23,6 +23,10 @@
 * 时区选择非大陆，作业时间贴合时区   ID：hmoytx提供
 * 使用自己塔建的DNSlog，目前网上dnslog站点已被监控，只要请求了域名就会被监测到。 ｜ID: mx7krshell
 * 在内网渗透时，关掉BurpSuite被动扫描。否则自己无意识访问网站会发起Fastjson、Shiro探测导致被安全设备检测到。 ｜ID：mx7krshell
+* 用fscan扫内网不要使用默认参数，不然被发现很快，需要加上-nopoc -nobr，以及默认fscan扫Title的时候会包含Shiro探测   ｜ID：mx7krshell
+* 文件传输，即用即开，不要开太持久，最好有动态VPS每次下载地址不同   ｜ID: mx7krshell
+* 通过SimpleHTTPServer下载木马会被识别为`下载可疑文件`，通过http-header识别：`SimpleHTTP|python`例如修改png图片，则是会验证图片格式，结合上述行为判断为`下载恶意文件`。     ｜ID: mx7krshell
+* 用两台CS，用于区分，一台用于下载上线， 另一台用作备用， 只要内网有一台机器被检测或识别到远控行为，通过设备全局搜索也能确认哪几台已经中招。 所以不要把鸡蛋放一个篮子。`木马名称也不要相同，也可以通过全局搜索定位`    ｜ID: mx7krshell
 
 ## 安全意识篇
 
@@ -51,3 +55,4 @@
 * 一个团队，一定要团结一心，相互包容，互相帮助学习和进步，不要勾心斗角。否则这团队个人再厉害也是一盘散沙。
 * 所有浏览器升级到最新版本，禁止使用旧版谷歌浏览器 ｜ ID: _得闲饮茶_
 * 有反蜜罐插件anti-honeypot，工具都是不可信的，防守方把靶标伪装成蜜罐 | ID：mx7krshell
+* 上传filename名称尽量使用随机， 习惯性用`webshell名称.php` `1.php` `a.php`，通过全局搜索也能够发现哪些机器或者流量中有这个特征。   | ID：mx7krshell
